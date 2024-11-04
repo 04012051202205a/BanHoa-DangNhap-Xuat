@@ -34,9 +34,9 @@ public class LogoutServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         if (session.getAttribute("username") != null) {
-//xoá biến username trong session của người dùng
+
             session.removeAttribute("username");
-//chuyển hướng người dùng về trang mặc định
+
             response.sendRedirect("home.jsp");
         }
     }

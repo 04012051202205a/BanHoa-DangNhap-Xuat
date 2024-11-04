@@ -31,13 +31,13 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-//kiểm tra thông tin đăng nhập
-        if (username.equalsIgnoreCase("admin") && password.equals("admin")) //thành công
+
+        if (username.equalsIgnoreCase("admin") && password.equals("admin"))
         {
             HttpSession session = request.getSession();
-//lưu thông tin trạng thái đăng nhập vào session của người dùng
+
             session.setAttribute("username", username);
-            response.sendRedirect("home.jsp"); // chuyển hướng đến trang home.jsp
+            response.sendRedirect("home.jsp"); 
         } else //thất bại
         {
             request.setAttribute("error", "Đăng nhập thất bại do sai tên đăng nhập hoặc mật khẩu");

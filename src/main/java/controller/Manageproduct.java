@@ -135,10 +135,10 @@ public class Manageproduct extends HttpServlet {
                 }
                 break;
             case "DELETE":
-                //  System.out.println("DELETE");
+               
                 int mahoa = Integer.parseInt(request.getParameter("mahoa"));
                 if (hoaDAO.Delete(mahoa)) {
-                    // thông báo thêm thành công
+                  
                     request.setAttribute("success", " thao tác xoá thành công");
                 } else {
                     request.setAttribute("erorr", "thao tác xoá thất bại");
